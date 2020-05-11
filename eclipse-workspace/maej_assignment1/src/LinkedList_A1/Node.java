@@ -1,5 +1,8 @@
 /**
  * COMP 410
+ * 
+ * Instructor provided Node class to hold data objects 
+ * 
  * Don't modify this file!
 */
 

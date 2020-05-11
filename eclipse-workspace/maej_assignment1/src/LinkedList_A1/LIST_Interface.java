@@ -1,4 +1,7 @@
 /**
+ * 
+ * Instructor provided Interface and specifications
+ * 
  * COMP 410
  *
  * Make your class and its methods public!
@@ -10,6 +13,8 @@
 
 
 package LinkedList_A1;
+
+
 /*
   Interface: The LIST will provide this collection of operations:
 
