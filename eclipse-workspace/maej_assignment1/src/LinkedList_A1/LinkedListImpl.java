@@ -6,6 +6,9 @@
 package LinkedList_A1;
 
 public class LinkedListImpl implements LIST_Interface {
+	
+//instructor provided code
+	
   Node headCell; //this will be the entry point to your linked list (the head)
   Node lastCell; // this is the Node at the end of the list... the starting place
                  // if you wanted to traverse the list backwards
@@ -26,11 +29,12 @@ public class LinkedListImpl implements LIST_Interface {
   public Node getLast(){ //leave this method as is, used by the grader to grab your linkedList easily.
     return lastCell;
   }
-
+  
+//end instructor provided code
 
 public boolean insert(double elt, int index) {
 	
-	//terminate if index size is out of bounds for list
+	//terminate if index size is out of bounds
 	if((index > size())||(index < 0)) {return false;}
 	
 	Node nNode = new Node(elt);
@@ -84,14 +88,18 @@ public boolean insert(double elt, int index) {
 			n.next.prev = nNode;
 			n.next = nNode; 
 			nNode.prev = n;
+			return true;
 					
 		}
 				
 	}
+	return false; //an error occurred 
 	
-	return true;
+
 }
 
+
+//insert element at index where elt.prev < elt < elt.next
 public boolean insort(double elt) {
 
 	Node nNode = new Node(elt);
@@ -137,6 +145,7 @@ public boolean remove(int index) {
 	//return false if index out of bounds
 	if((index > size())||(index < 0)) {return false;}
 	
+	//headCell removal when size is 1
 	if(size()==1) {
 		headCell.next = null;
 		lastCell.prev = null;
